@@ -11,8 +11,8 @@ import time
 import threading
 
 # Konfiguracja ścieżek
-CHROMEDRIVER_PATH = r"C:/Users/Rafał/Downloads/chrome/chromedriver-win64/chromedriver.exe"
-PROTON_PLUGIN_PATH = r"C:/Users/Rafał/Downloads/Proton-VPN-Fast-Secure-Chrome-Web-Store.crx"
+CHROMEDRIVER_PATH = r"chromedriver.exe"
+PROTON_PLUGIN_PATH = r"Proton-VPN-Fast-Secure-Chrome-Web-Store.crx"
 PROTON_LOGIN_URL = "https://account.proton.me/vpn"
 
 def create_driver_with_extension():
@@ -103,9 +103,8 @@ def start_program():
         twitch_url = twitch_url_entry.get()
         manual_login = manual_login_var.get()
 
-        if not twitch_url.startswith("https://www.twitch.tv/"):
-            messagebox.showerror("Błąd", "Nieprawidłowy URL Twitch!")
-        elif num_browsers <= 0:
+
+        if num_browsers <= 0:
             messagebox.showerror("Błąd", "Liczba okien musi być większa od 0!")
         else:
             threading.Thread(
