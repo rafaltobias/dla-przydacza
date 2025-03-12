@@ -11,8 +11,8 @@ import time
 import threading
 
 # Konfiguracja ścieżek
-CHROMEDRIVER_PATH = r"chromedriver.exe"
-PROTON_PLUGIN_PATH = r"Proton-VPN-Fast-Secure-Chrome-Web-Store.crx"
+CHROMEDRIVER_PATH = r"C:/chromium/chromedriver.exe"
+PROTON_PLUGIN_PATH = r"C:/chromium/Proton-VPN-Fast-Secure-Chrome-Web-Store.crx"
 PROTON_LOGIN_URL = "https://account.proton.me/vpn"
 
 def create_driver_with_extension():
